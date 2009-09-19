@@ -8,6 +8,7 @@ To install and run this template perform following actions:
 git clone git://github.com/devinterface/authlogic_subdomain_fu_startup_app.git
 rake gems:install 
 rake gems:install RAILS_ENV=test
+cp config/database.yml.example config/database.yml
 rake db:migrate
 </code></pre>
 
