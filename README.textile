@@ -1,0 +1,50 @@
+h1. Rails Authlogic + Subdomain_fu Template
+
+This template works as a skeleton for any new Rails application (using Rails 2.3) that aims to provide authentication with subdomain support. 
+
+To install it, just clone the repository from "github":http://github.com
+
+<pre><code>
+git clone git://github.com/xponrails/authlogic_subdomain_fu_startup_app.git
+rake gems:install 
+rake gems:install RAILS_ENV=test
+rake db:migrate
+</code></pre>
+
+h2. Skeleton Behaviour
+
+This template sets up a working application with support for authentication and subdomain. 
+
+h3. Application workflow
+* Guest access a public section of the site (http://localhost:3000) 
+* Guest chooses to register new account (http://localhost:3000/account/new), including itself as user, and becomes account's owner
+* Accounts owner goes to his account (subdomain) url (http://useraccount.localhost:3000/login) and logs into his account
+* Accounts owner can add more users to it's account (http://useraccount.localhost:3000/users/new)
+* Each created user can log into the account they belong  
+
+h2. Skeleton features
+
+Here's a list of what this template sets up:
+
+h3. Rails
+* "Authlogic":http://github.com/binarylogic/authlogic/tree/master
+* "Subdomain_fu":http://github.com/mbleigh/subdomain-fu
+
+h3. Javascript
+* "jQuery":http://jquery.com as javascript framework instead of prototype
+
+h3. CSS
+* "Blueprint":http://github.com/joshuaclayton/blueprint-css/tree/master as css framework
+
+h3. Testing
+* BDD testing support using "RSpec":http://github.com/dchelimsky/rspec/tree/master, "Cucumber":http://github.com/aslakhellesoy/cucumber/tree/master, and "FactoryGirl":http://github.com/thoughtbot/factory_girl/tree/master
+
+h3. Other
+Some other useful gems/plugins such as:
+
+* "Hpricot":http://github.com/whymirror/hpricot/tree/master
+* "RedCloth":http://redcloth.org
+* "Will Paginate":http://github.com/mislav/will_paginate/tree/master
+* "SearchLogic":http://github.com/binarylogic/searchlogic/tree/master
+* "Exception Notifier":http://github.com/rails/exception_notification/tree/master
+* "Inaction Mailer":http://github.com/cwninja/inaction_mailer/

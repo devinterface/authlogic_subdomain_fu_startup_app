@@ -1,0 +1,46 @@
+/* @group Live Validations */
+
+.LV_validation_message {
+	font-weight: bold;
+	margin-left: 5px;	
+}
+
+.LV_valid {
+	background:#E6EFC2;
+	color:#264409;
+	border-color:#C6D880;
+}
+
+.LV_invalid {
+	background:#FBE3E4;
+	color:#8a1f11;
+	border-color:#FBC2C4;
+}
+
+.LV_invalid_field {
+	border-color: red;
+	border-width: 1px;
+}
+
+  /* @end */
+/* embeds the openid image in the text field */
+input#user_openid_identifier, input#user_session_openid_identifier {
+  background: url(http://openid.net/images/login-bg.gif) no-repeat;
+  background-color: #fff;
+  background-position: 0 50%;
+  color: #000;
+  padding-left: 18px;
+}
+
+#header {
+ background-color: green;
+}
+
+#right_menu {
+ background-color: lightblue;
+}
+
+#footer {
+ background-color: blue;
+}
+

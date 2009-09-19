@@ -1,0 +1,46 @@
+h1. Sweatshop
+
+A Rails plugin that generates "factory_girl":http://github.com/thoughtbot/factory_girl/tree/master Factories for all of your ActiveRecord models.
+
+h2. Requirements
+
+You should probably have the "factory_girl":http://github.com/thoughtbot/factory_girl/tree/master gem installed
+
+h2. How to Install & Use
+
+# Install the factory_girl gem
+<pre><code>
+gem install factory_girl
+</code></pre>
+
+# Install the plugin
+<pre><code>
+./script/plugin install git://github.com/mdarby/sweatshop.git
+</code></pre>
+
+# Run the following rake task to generate your Factories
+<pre><code>
+rake sweatshop:generate
+</code></pre>
+
+# Make sure you put the two following lines into spec/spec_helper.rb:
+<pre><code>
+require 'factory_girl'
+Dir.glob("#{RAILS_ROOT}/spec/factories/*.rb").each{|factory| require factory}
+</code></pre>
+
+# Your Factories will now be automatically included whenever you run your specs.
+
+That’s it!
+
+
+h2. Notes
+
+I use "RSpec":http://github.com/dchelimsky/rspec/tree/master for my BDD habit; you might use something else. Those two lines I mention above can be used in Test::Unit, I'm sure. However, it's up to you to figure out ;)
+
+
+h2. About the Author
+
+My name is Matt Darby. I’m a 29 year old professional Web Developer and IT Manager. I am the IT Manager and Lead Web Developer at Dynamix Engineering and recently earned a Master’s Degree in Computer Science from Franklin University in Columbus, OH.
+
+Feel free to check out my "blog":http://blgo.matt-darby.com or to "recommend me":http://workingwithrails.com

@@ -1,0 +1,22 @@
+<p>
+<%= form.label :subdomain %><br />
+<%= form.text_field :subdomain %>
+</p>
+<% form.fields_for :users do |user_form| %>
+<p>
+<%= user_form.label :login %><br />
+<%= user_form.text_field :login %>
+</p>
+<p>
+<%= user_form.label :email %><br />
+<%= user_form.text_field :email %>
+</p>
+<p>
+<%= user_form.label :password, user_form.object.new_record? ? nil : "Change password" %><br />
+<%= user_form.password_field :password %>
+</p>
+<p>
+<%= user_form.label :password_confirmation %><br />
+<%= user_form.password_field :password_confirmation %>
+</p>
+<% end %>

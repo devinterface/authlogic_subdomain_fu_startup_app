@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title><%= @page_title || controller.action_name %></title>
+      <%= stylesheet_link_tag 'screen', :media => 'screen, projection', :cache => true %>
+  <%= stylesheet_link_tag 'print', :media => 'print', :cache => true %>
+  <!--[if IE]>
+    <%= stylesheet_link_tag 'ie', :media => 'screen, projection', :cache => true %>
+  <![endif]-->
+
+    <%= stylesheet_link_tag 'application', :media => 'all', :cache => true %>
+    <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js", "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js", "jquery.form.js", "application", :cache => true  %>
+    <%= yield :head %>
+  </head>
+  <body>
+    <div class="container">
+      <div id="header">this is the header</div>
+      <hr class="space">
+      <div class="span-15 prepend-1 colborder">
+      <%= render :partial => 'layouts/flashes' -%>
+      <%= yield %>
+      </div>
+      <div class="span-7 last" id="right_menu">
+        this is the right menu menu
+        <div id="user_nav">
+        <%= link_to "Register a new account", new_account_path %>
+      </div>
+      </div>
+      <hr class="space">
+      <div id="footer">
+        this is the footer
+      </div>
+    </div>
+  </body>
+</html>
