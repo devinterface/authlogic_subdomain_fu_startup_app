@@ -1,0 +1,9 @@
+.DS_Store
+log/*.log
+/log/*.pid
+/coverage/*
+tmp/**/*
+config/database.yml
+db/*.sqlite3
+vendor/rails
+tmp/sent_mails/*
