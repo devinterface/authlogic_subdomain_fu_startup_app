@@ -24,7 +24,7 @@ module App
         end
         
         def current_account
-          Account.find_by_subdomain(account_subdomain)
+          @current_account ||= Account.find_by_subdomain(account_subdomain)
         end
         
         def default_account_subdomain
@@ -126,17 +126,15 @@ module App
         end
   
         def owned_by_current_user?(object)
-          true if object.user_id == current_user.id.to_s
+          object.user_id == current_user.id.to_s
         end
   
         def current_user
-          return @current_user if defined?(@current_user)
-          @current_user = current_user_session && current_user_session.record
+          @current_user ||= current_user_session && current_user_session.record
         end
   
         def current_user_session
-          return @current_user_session if defined?(@current_user_session)
-          @current_user_session = current_account != nil ? current_account.user_sessions.find : nil
+          @current_user_session ||= current_account != nil ? current_account.user_sessions.find : nil
         end
         
         def store_location
