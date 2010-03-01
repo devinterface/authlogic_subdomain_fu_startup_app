@@ -42,11 +42,4 @@ h3. Testing
 
 h3. Other
 
-Some other useful gems/plugins such as:
-
-* "Hpricot":http://github.com/whymirror/hpricot/tree/master
-* "RedCloth":http://redcloth.org
-* "Will Paginate":http://github.com/mislav/will_paginate/tree/master
-* "SearchLogic":http://github.com/binarylogic/searchlogic/tree/master
 * "Exception Notifier":http://github.com/rails/exception_notification/tree/master
-* "Inaction Mailer":http://github.com/cwninja/inaction_mailer/
