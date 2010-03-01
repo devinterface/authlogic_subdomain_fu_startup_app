@@ -1,16 +1,12 @@
 # Be sure to restart your server when you modify this file
 
 # Specifies gem version of Rails to use when vendor/rails is not present
-RAILS_GEM_VERSION = '2.3.3' unless defined? RAILS_GEM_VERSION
+RAILS_GEM_VERSION = '2.3.5' unless defined? RAILS_GEM_VERSION
 
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
-  config.gem 'binarylogic-searchlogic', :lib => 'searchlogic', :source => 'http://gems.github.com', :version => '~> 2.0'
-  config.gem 'mislav-will_paginate', :lib => 'will_paginate', :source => 'http://gems.github.com'
-  config.gem 'RedCloth', :lib => 'redcloth'
-  config.gem 'hpricot', :source => 'http://code.whytheluckystiff.net'
   config.gem 'binarylogic-authlogic', :lib => 'authlogic', :source => 'http://gems.github.com'
   config.gem 'mbleigh-subdomain-fu', :source => "http://gems.github.com", :lib => "subdomain-fu"
   # Settings in config/environments/* take precedence over those specified here.
