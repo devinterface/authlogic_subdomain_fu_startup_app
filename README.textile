@@ -1,5 +1,9 @@
 h1. Rails Authlogic + Subdomain_fu Template
 
+h2. IMPORTANT NOTE
+This branch covers new Rails 3 version (rails beta 2).
+Currently, is still under development and it doesn't work at all.
+
 This template works as a skeleton for any new Rails application (using Rails 2.3) that aims to provide authentication with subdomain support. 
 
 To install and run this template perform following actions:
