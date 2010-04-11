@@ -37,18 +37,18 @@ module App
 
         def account_subdomain
           #request.subdomains.first || ''
-          current_subdomain #see subdomain_fu
+          SubdomainFu.current_subdomain request #see subdomain_fu
         end
         
         def account_domain
           #account_domain = ''
           #account_domain << request.domain + request.port_string
-          current_domain #see subdomain_fu
+          SubdomainFu.current_domain request#see subdomain_fu
         end
 
         def subdomain?
           #request.subdomains
-          current_subdomain #see subdomain_fu
+          SubdomainFu.current_subdomain request#see subdomain_fu
         end
 
         def http_protocol( use_ssl = request.ssl? )
