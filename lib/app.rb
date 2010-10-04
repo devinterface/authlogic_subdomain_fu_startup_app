@@ -36,16 +36,19 @@ module App
         end
 
         def account_subdomain
-          request.subdomains.first || ''
+          #request.subdomains.first || ''
+          SubdomainFu.current_subdomain request #see subdomain_fu
         end
         
         def account_domain
-          account_domain = ''
-          account_domain << request.domain + request.port_string
+          #account_domain = ''
+          #account_domain << request.domain + request.port_string
+          SubdomainFu.current_domain request#see subdomain_fu
         end
 
         def subdomain?
-          request.subdomains.first
+          #request.subdomains
+          SubdomainFu.current_subdomain request#see subdomain_fu
         end
 
         def http_protocol( use_ssl = request.ssl? )
@@ -53,15 +56,15 @@ module App
         end
         
         # TODO: Make account_url and account_host methods work
-        def account_url(account_subdomain = default_account_subdomain, use_ssl = request.ssl?)
-           http_protocol(use_ssl) + account_host(account_subdomain)
-        end
-        
-        def account_host(subdomain)
-           account_host = ''
-           account_host << subdomain + '.'
-           account_host << account_domain
-        end
+        # def account_url(account_subdomain = default_account_subdomain, use_ssl = request.ssl?)
+        #   http_protocol(use_ssl) + account_host(account_subdomain)
+        # end
+        # 
+        # def account_host(subdomain)
+        #   account_host = ''
+        #   account_host << subdomain + '.'
+        #   account_host << account_domain
+        # end
     end
     module Users
       def self.included(controller)

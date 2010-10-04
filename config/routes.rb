@@ -1,11 +1,11 @@
-AuthlogicSubdomainStartupApp::Application.routes.draw do
+AuthlogicSubdomainFuStartupApp::Application.routes.draw do
 
   resource :account do
     resources :users
   end
   
 
-  constraints(SubdomainRoute) do
+  constraints(:subdomain => /.+/) do
     resources :users
     resource :user_session
     match '/login/' => 'user_sessions#new', :as => :login, :via => ''

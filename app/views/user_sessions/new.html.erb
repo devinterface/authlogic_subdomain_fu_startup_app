@@ -1,7 +1,7 @@
 <fieldset>
     <legend>Login</legend>
 <% form_for @user_session, :url => user_session_path do |f| %>
-  <%= render 'shared/error_messages', :target => @user_session %>
+  <%= f.error_messages %>
   <p>
   <%= f.label :login %><br />
   <%= f.text_field :login %>
