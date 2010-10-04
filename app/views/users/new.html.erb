@@ -1,8 +1,8 @@
 <fieldset>
 <legend>Register User</legend>
 <% form_for @user, :url => {:action => "create"} do |f| %>
-  <%= f.error_messages %>
-  <%= render :partial => "form", :object => f %>
+  <%= render 'shared/error_messages', :target => @user %>
+  <%= render 'form', :form => f %>
   <%= f.submit "Register" %>
 <% end %>
 </fieldset>
