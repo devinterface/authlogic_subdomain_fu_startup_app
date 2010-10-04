@@ -1,7 +1,7 @@
 <fieldset>
 <legend>Edit My Account</legend>
 <% form_for @user, :url => user_path do |f| %>
-  <%= render "shared/error_messages", :target => @user %>  
+  <%= render 'shared/error_messages', :target => @user %>
   <%= render 'form', :form => f %>
   <%= f.submit "Update" %>
 <% end %>
