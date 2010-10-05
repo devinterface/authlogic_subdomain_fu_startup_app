@@ -10,5 +10,5 @@ vendor/rails
 tmp/sent_mails/*
 .bundle
 .idea
-.redcar
+.redcar*/*
 *.lock
