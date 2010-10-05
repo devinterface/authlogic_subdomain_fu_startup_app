@@ -32,7 +32,6 @@ Here's a list of what this template sets up:
 
 h3. Rails
 * "Authlogic":http://github.com/binarylogic/authlogic/tree/master
-* "Subdomain_fu":http://github.com/mbleigh/subdomain-fu
 
 h3. Javascript
 * "jQuery":http://jquery.com as javascript framework instead of prototype
