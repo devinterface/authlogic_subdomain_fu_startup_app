@@ -1,14 +1,17 @@
-h1. Rails Authlogic + Subdomain_fu Template
+h1. Rails Authlogic + Subdomain Template
 
-This template works as a skeleton for any new Rails application (using Rails 2.3) that aims to provide authentication with subdomain support. 
+h2. IMPORTANT NOTE
+This branch covers new Rails 3 version
+
+
+This template works as a skeleton for any new Rails application (using Rails 3) that aims to provide authentication with subdomain support. 
 
 To install and run this template perform following actions:
 
 <pre><code>
 git clone git://github.com/devinterface/authlogic_subdomain_fu_startup_app.git
 cp config/database.yml.example config/database.yml
-rake gems:install 
-rake gems:install RAILS_ENV=test
+bundle install  
 rake db:migrate
 </code></pre>
 
@@ -29,7 +32,6 @@ Here's a list of what this template sets up:
 
 h3. Rails
 * "Authlogic":http://github.com/binarylogic/authlogic/tree/master
-* "Subdomain_fu":http://github.com/mbleigh/subdomain-fu
 
 h3. Javascript
 * "jQuery":http://jquery.com as javascript framework instead of prototype
